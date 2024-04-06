@@ -1,28 +1,3 @@
-/**
- * Data Catalog Project Starter Code - SEA Stage 2
- *
- * This file is where you should be doing most of your work. You should
- * also make changes to the HTML and CSS files, but we want you to prioritize
- * demonstrating your understanding of data structures, and you'll do that
- * with the JavaScript code you write in this file.
- *
- * The comments in this file are only to help you learn how the starter code
- * works. The instructions for the project are in the README. That said, here
- * are the three things you should do first to learn about the starter code:
- * - 1 - Change something small in index.html or style.css, then reload your
- *    browser and make sure you can see that change.
- * - 2 - On your browser, right click anywhere on the page and select
- *    "Inspect" to open the browser developer tools. Then, go to the "console"
- *    tab in the new window that opened up. This console is where you will see
- *    JavaScript errors and logs, which is extremely helpful for debugging.
- *    (These instructions assume you're using Chrome, opening developer tools
- *    may be different on other browsers. We suggest using Chrome.)
- * - 3 - Add another string to the names array a few lines down. Reload your
- *    browser and observe what happens. You should see a fourth "card" appear
- *    with the string you added to the array, but a broken image.
- *
- */
-
 let sites = [
   {
     name: "Pro-Club",
@@ -92,48 +67,30 @@ let cool = sites.slice(4, 8);
 // zara the good stuff uniqlo the good stuff, california arts
 let smartCasual = sites.slice(8, 11);
 
-//
-
-// This function adds cards the page to display the data in the array
-function showCards() {
+function showCards(cardsArray) {
   const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = "";
-  const templateCard = document.querySelector(".card");
+  cardContainer.innerHTML = ""; // Clear existing content
 
-  for (let i = 0; i < sites.length; i++) {
-    let name = sites[i].name;
-    let description = sites.map((sites) => sites.description);
-    let img = sites.map((sites) => sites.img);
-
-    const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, name, img, description); // Edit name and image
-    cardContainer.appendChild(nextCard); // Add new card to the container
-  }
-}
-
-function editCardContent(card, newName, newImg, newDescription) {
-  card.style.display = "block";
-
-  const cardHeader = card.querySelector("h2");
-  cardHeader.textContent = newName;
-
-  // add images
-  const cardImage = card.querySelector("img");
-  cardImage.src = newImg;
-  cardImage.alt = newName + " Poster";
-
-  const cardList = card.querySelector("ul");
-  cardList.value = newDescription;
-  let cardDesc = cardList.value;
-  cardDesc.forEach((obj) => {
-    const li = document.createElement("li");
-    li.textContent = obj;
-    cardList.appendChild(li);
+  cardsArray.forEach((site) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+          <h2>${site.name}</h2>
+          <p>${site.description}</p>
+      `;
+    card.onclick = function () {
+      window.location.href = site.url;
+    }; // Navigate on click
+    cardContainer.appendChild(card);
   });
 }
 
-// This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
+// Call the function with the 'basic' array to show cards on load
+document.addEventListener("DOMContentLoaded", function () {
+  showCards(sites);
+});
+
+let cardSelection = document.getElementById("selection");
 
 function quoteAlert() {
   console.log("Button Clicked!");
@@ -143,6 +100,6 @@ function quoteAlert() {
 }
 
 function removeLastCard() {
-  names.pop(); // Remove last item in names array
+  sites.pop(); // Remove last item in names array
   showCards(); // Call showCards again to refresh
 }
