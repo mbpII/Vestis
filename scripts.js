@@ -124,10 +124,11 @@ function home() {
   window.location.href = "index.html";
 }
 
-function shuffleCards() {
-  let shuffled = buttonValue
+function drawThree() {
+  let shuffle = sites
     .map((value) => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value);
-  showCards(shuffled);
+  let draw = shuffle.slice(0, 3);
+  showCards(draw);
 }
