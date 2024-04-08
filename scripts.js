@@ -59,7 +59,7 @@ let sites = [
   {
     name: "Uniqlo",
     url: "https://www.uniqlo.com/us/en/contents/feature/masterpiece/ ",
-    imgurl: "/img/",
+    imgurl: "/img/uniqlo.png",
     description:
       "Uniqlo but where they hide the good stuff, mostly high quility essentials",
   },
@@ -111,7 +111,6 @@ function navigation() {
 function setCardSelection(buttonValue) {
   let cardSelection = "basic";
   cardSelection = buttonValue;
-  console.log(cardSelection);
   if (cardSelection === "basic") {
     showCards(basic);
   } else if (cardSelection === "cool") {
@@ -124,5 +123,11 @@ function setCardSelection(buttonValue) {
 function home() {
   window.location.href = "index.html";
 }
-// make remove cards button
-//make navigation show when card visible
+
+function shuffleCards() {
+  let shuffled = buttonValue
+    .map((value) => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+  showCards(shuffled);
+}
