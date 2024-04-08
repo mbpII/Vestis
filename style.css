@@ -1,43 +1,55 @@
 html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
+body {
+  display: block;
+  background-color: #fbf9f5;
+}
 .main-header {
-  background-color: rgba(0, 0, 0, 0.3);
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
   padding-bottom: 10px;
 }
-
-.title {
+#removebtn {
+  background-color: lightcoral;
+}
+#title {
   text-align: center;
   margin: 0;
-  font-size: 8em;
+  font-size: 8vh;
   font-family: "Helvetica";
   font-weight: normal;
-  color: white;
+  color: #050505;
+  cursor: pointer;
 }
 
 #card-container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  flex-direction: row;
+  padding: 5vh 0;
 }
 
 .card {
-  width: 30vw;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 5px;
+  height: 70vh;
+  max-height: 600px;
+  width: 33vw;
+  text-align: center;
+  flex: 1 30px;
 }
 
 .card-content {
   padding: 20px;
   font-family: "Verdana";
-  color: #777;
+  color: #050505;
 }
 
 .card:hover {
@@ -50,36 +62,35 @@ body {
   margin-top: 0;
   font-size: 20px;
 }
-.main-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
 
-.card img {
-  width: 100%;
-  height: auto;
+img {
+  width: 300px;
+  height: 400px;
+  max-width: 30vw;
+  max-height: 40vh;
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px;
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 6%;
+  width: 100%;
+  background-color: #3c3e73;
+  color: white;
+  text-align: center;
 }
 
 button {
   text-align: center;
-  background-color: #666;
   border: none;
   padding-left: 10px;
   padding-right: 10px;
-  height: 40px;
+  height: 4vh;
   border-radius: 10px;
   color: white;
-  font-size: 22px;
+  font-size: 2.2vh;
   cursor: pointer;
   margin: 5px;
 }

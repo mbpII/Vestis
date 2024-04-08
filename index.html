@@ -1,79 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Matt Online Clothing Stores| Home</title>
+    <title>Vestis| Home</title>
     <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <script type="text/javascript" src="scripts.js"></script>
   </head>
 
   <body>
     <header class="main-header">
-      <h1 class="title"></h1>
-      <button onclick="removeLastCard();">Remove A Card!</button>
+      <h1 id="title" onclick="home()">VESTIS</h1>
     </header>
 
-    <div class="main-cards">
+    <div id="card-container">
       <div>
-        <div id="basicsCard" class="card">
+        <div id="basicsCard" class="card" onclick="setCardSelection('basic')">
           <div class="card-content">
-            <h3 class="card-title">Basic</h3>
-            <img src="/img/Profile.jpg" alt="" />
+            <h3 class="card-title">Basics</h3>
+            <img
+              src="https://7thearthstudios.com/cdn/shop/files/Black_21.png?v=1710835285&width=1800"
+              alt=""
+            />
             <p class="card-description">
-              Ideal for those who've already got their website up and running
-              and are seeking assistance to enhance and update it further.
+              The essentials plan tees, hoodies, etc
             </p>
-          </div>
-          <div class="card-action">
-            <button
-              id="btn1"
-              onclick="window.location.href = 'another-page.html';"
-            >
-              Click for more
-            </button>
           </div>
         </div>
       </div>
       <div>
-        <div id="coolCard" class="card">
+        <div id="coolCard" class="card" onclick="setCardSelection('cool')">
           <div class="card-content">
-            <h3 class="card-title">Basic</h3>
-            <img src="/img/Profile.jpg" alt="" />
+            <h3 class="card-title">Streetwear</h3>
+            <img src="/img/streetwear.png" alt="" />
             <p class="card-description">
-              Ideal for those who've already got their website up and running
-              and are seeking assistance to enhance and update it further.
+              Interesting items or brands that ive come across
             </p>
-          </div>
-          <div class="card-action">
-            <button
-              id="btn2"
-              onclick="window.location.href = 'another-page.html';"
-            >
-              Click for more
-            </button>
           </div>
         </div>
       </div>
       <div>
-        <div id="smartcasual" class="card">
+        <div
+          id="smartCasual"
+          class="card"
+          onclick="setCardSelection('smartCasual')"
+        >
           <div class="card-content">
-            <h3 class="card-title">Basic</h3>
-            <img src="/img/Profile.jpg" alt="" />
+            <h3 class="card-title">Smart Casual</h3>
+            <img src="/img/slacks.png" alt="" />
             <p class="card-description">
-              Ideal for those who've already got their website up and running
-              and are seeking assistance to enhance and update it further.
+              More highend formal/ buisness casual leaning
             </p>
-          </div>
-          <div class="card-action">
-            <button
-              id="btn3"
-              onclick="window.location.href = 'another-page.html';"
-            >
-              Click for more
-            </button>
           </div>
         </div>
       </div>
     </div>
+
+    <footer class="footer">
+      <button onclick="home()">🏠</button>
+      <button id="removebtn" onclick="remove()">❌</button>
+    </footer>
   </body>
 </html>
+
+<!-- //make three pages with different values under the ids, just render using the
+div card-content loop, set value different for each page this will provide a
+loop for the cards, then you will have styling and finding imgs to deal with -->
