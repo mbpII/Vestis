@@ -3,7 +3,7 @@ let sites = [
     name: "Pro-Club",
     url: "https://shopproclub.com/ ",
     imgurl: "/img/proclub.png",
-    description: "the essentials tees, socks, etc",
+    description: "The essentials tees, socks, etc",
   },
   {
     name: "Seventh Earth",
@@ -15,8 +15,7 @@ let sites = [
     name: "MoojiMooji",
     url: "https://moojimoojius.com/",
     imgurl: "/img/mooji.png",
-    description:
-      "Colorful sweats Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Colorful sweats",
   },
   {
     name: "Momotaro Jeans",
@@ -34,15 +33,14 @@ let sites = [
     name: "Waffle sweats",
     url: "https://www.cottonnovas.com/products/heavyweight-knitted-cotton-waffle-sweatpant",
     imgurl: "/img/wafflesweats.png",
-    description:
-      "So interesting sweatpaints I found that ind never seen before",
+    description: "Some interesting sweatpants",
   },
   {
     name: "Barriers",
     url: "https://barriersworldwide.com/",
     imgurl: "/img/barriers.png",
     description:
-      "A brand heightlights Black historical figures and icons through clothing",
+      "A brand that highlights black historical figures and icons through clothing",
   },
   {
     name: "Radar Club",
@@ -54,7 +52,7 @@ let sites = [
     name: "Zara",
     url: "https://www.zara.com/us/en/origins-collection-l4661.html?v1=2297670&regionGroupId=13 ",
     imgurl: "/img/zara.png",
-    description: "Zara but the good stuff Lorem ipsum dolor sit am",
+    description: "Zara but the good stuff",
   },
   {
     name: "Uniqlo",
