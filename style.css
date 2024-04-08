@@ -16,6 +16,7 @@ body {
   display: flex;
   align-items: center;
   padding-bottom: 10px;
+  border-bottom: 0.5vh double #050505;
 }
 #removebtn {
   background-color: lightcoral;
