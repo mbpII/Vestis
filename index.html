@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vestis| Home</title>
+    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="scripts.js"></script>
+  </head>
+
+  <body>
+    <header class="main-header">
+      <h3 id="title" onclick="home()">VESTIS</h3>
+    </header>
+
+    <div id="card-container">
+      <div>
+        <div id="basicsCard" class="card" onclick="setCardSelection('basic')">
+          <div class="card-content">
+            <h3 class="card-title">Basics</h3>
+            <img
+              src="https://7thearthstudios.com/cdn/shop/files/Black_21.png?v=1710835285&width=1800"
+              alt=""
+            />
+            <p class="card-description">
+              The essentials plan tees, hoodies, etc
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div id="coolCard" class="card" onclick="setCardSelection('cool')">
+          <div class="card-content">
+            <h3 class="card-title">Streetwear</h3>
+            <img src="/img/streetwear.png" alt="" />
+            <p class="card-description">
+              Interesting items or brands that ive come across
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          id="smartCasual"
+          class="card"
+          onclick="setCardSelection('smartCasual')"
+        >
+          <div class="card-content">
+            <h3 class="card-title">Smart Casual</h3>
+            <img src="/img/slacks.png" alt="" />
+            <p class="card-description">
+              More highend formal/ buisness casual leaning
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <button onclick="home()">🏠</button>
+      <button id="drawThreebtn" onclick="drawThree()">🃏</button>
+    </footer>
+  </body>
+</html>
+
+<!-- //make three pages with different values under the ids, just render using the
+div card-content loop, set value different for each page this will provide a
+loop for the cards, then you will have styling and finding imgs to deal with -->
